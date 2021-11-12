@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practise 4</title>
+</head>
+<style>
+    table, td, tr {
+        border: 1px solid;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    table{
+        width: 400px;
+        height: 400px;
+    }
+</style>
+<body>
+<h4 id="test"></h4>
+</body>
+<script>
+      let bangDep;
+      bangDep = "<table>";
+    for (let i = 1; i < 11; i++) {
+        bangDep = bangDep + "<tr>";
+        for (let j = 1; j < 11; j++) {
+            bangDep = bangDep + "<td>"+ (i*j) + "</td>"
+        }
+        bangDep = bangDep + "</tr>";
+    }
+    bangDep += "</table>"
+      document.getElementById("test").innerHTML = bangDep;
+
+</script>
+</html>
