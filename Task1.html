@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplication Table</title>
+</head>
+<style>
+    table, td, tr {
+        border: 1px solid;
+        border-collapse: collapse;
+    }
+    table {
+        width: 600px;
+        height: 400px;
+        text-align: center;
+    }
+</style>
+<body>
+<h4 id="mulTable"></h4>
+</body>
+<script>
+    let mulTable = "<table>";
+    for (let i = 2; i < 10; i++) {
+        mulTable = mulTable + "<tr>"
+        for (let j = 1; j < 10; j++) {
+            mulTable = mulTable + "<td>" + i + "*" + j + " = " + (i*j) + "</td>"
+        }
+        mulTable = mulTable + "</tr>"
+    }
+    mulTable = mulTable + "</table>"
+    document.getElementById("mulTable").innerHTML = mulTable
+</script>
+</html>
