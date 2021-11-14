@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1.8</title>
+</head>
+<body>
+<button type="button" id="play" onclick="play()">Chơi ở đây nè</button>
+</body>
+<script>
+function play(){
+    let so1 = +prompt("Từ số: ");
+    let so2 = +prompt("Đến số: ");
+    let soNgauNhien = Math.round(Math.random()*(so2 - so1) + so1);
+    let soDoan = +prompt("Dự đoán số đi người anh em")
+    for (let i = 0; i < 2; i++) {
+        if (soDoan == soNgauNhien){
+            alert("Chuẩn rồi bạn ê");
+            break;
+        } else if (soDoan > soNgauNhien){
+            alert("Lớn hơn mất rồi, chọn lại nhá");
+            soDoan = prompt("Đoán lại đi người anh em");
+        } else {
+            alert("Bé hơn rồi, đoán lại đi");
+            soDoan = prompt("Đoán lại đi người anh em");
+        }
+    }
+
+    alert("Số đúng là " + soNgauNhien);
+}
+</script>
+</html>
